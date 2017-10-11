@@ -10,7 +10,7 @@ else:
   raise ValueError('Format: python get_img.py [url]')
 
 
-target_directory = './'
+target_directory = './../Desktop/Temp/'
 r = requests.get(url)
 html_doc = r.text
 soup = BeautifulSoup(html_doc, 'html.parser')
@@ -28,3 +28,4 @@ for item in imgList_json:
   print('img #' + str(count) + ' downloaded')
   count += 1
 print('Images Total: ' + str(count - 1))
+print('Target Directory: ' + target_directory)
